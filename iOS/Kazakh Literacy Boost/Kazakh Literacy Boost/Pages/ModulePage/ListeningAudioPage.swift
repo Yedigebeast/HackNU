@@ -50,8 +50,12 @@ struct ListeningAudioPage: View {
                 .foregroundStyle(.black)
                 Spacer()
                     .frame(height: 64)
+                HStack {
+                    Text("Аудиода не айтылды?")
+                        .bold()
+                    Spacer()
+                }
                 TextEditor(text: $text)
-                    .navigationTitle("Аудиода қандай текст айтылды?")
                     .frame(height: 300)
                     .cornerRadius(16)
                 Spacer()
