@@ -10,5 +10,6 @@ import Foundation
 class NetworkingService {
     let baseURL = "http://127.0.0.1:8000"
     var readingTextDelegate: ReadingTextRequestDelegate? = nil
+    var listeningAudioDelegate: ListeninAudioRequestDelegate? = nil
     
 }

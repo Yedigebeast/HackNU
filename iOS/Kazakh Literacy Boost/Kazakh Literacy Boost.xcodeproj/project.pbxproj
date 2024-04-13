@@ -19,6 +19,8 @@
 		FE4FF8B92BCAB4920059B343 /* NetworkingService+ReadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8B82BCAB4920059B343 /* NetworkingService+ReadingText.swift */; };
 		FE4FF8BB2BCABD630059B343 /* ModulePageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8BA2BCABD630059B343 /* ModulePageModel.swift */; };
 		FE4FF8BD2BCABF1D0059B343 /* ReadingTextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8BC2BCABF1D0059B343 /* ReadingTextPage.swift */; };
+		FE4FF8C32BCB07550059B343 /* ListeningAudioPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8C22BCB07550059B343 /* ListeningAudioPage.swift */; };
+		FE4FF8C52BCB07EE0059B343 /* NetworkingService+ListeningAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8C42BCB07EE0059B343 /* NetworkingService+ListeningAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FE4FF8B82BCAB4920059B343 /* NetworkingService+ReadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkingService+ReadingText.swift"; sourceTree = "<group>"; };
 		FE4FF8BA2BCABD630059B343 /* ModulePageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePageModel.swift; sourceTree = "<group>"; };
 		FE4FF8BC2BCABF1D0059B343 /* ReadingTextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingTextPage.swift; sourceTree = "<group>"; };
+		FE4FF8C22BCB07550059B343 /* ListeningAudioPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningAudioPage.swift; sourceTree = "<group>"; };
+		FE4FF8C42BCB07EE0059B343 /* NetworkingService+ListeningAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkingService+ListeningAudio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			children = (
 				FE4FF8B42BCAB2BB0059B343 /* NetworkingService.swift */,
 				FE4FF8B82BCAB4920059B343 /* NetworkingService+ReadingText.swift */,
+				FE4FF8C42BCB07EE0059B343 /* NetworkingService+ListeningAudio.swift */,
 			);
 			path = NetworkingService;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				FE4FF8AB2BCA9AC90059B343 /* ModulePage.swift */,
 				FE4FF8BC2BCABF1D0059B343 /* ReadingTextPage.swift */,
+				FE4FF8C22BCB07550059B343 /* ListeningAudioPage.swift */,
 			);
 			path = ModulePage;
 			sourceTree = "<group>";
@@ -191,10 +197,12 @@
 				FE4FF8B92BCAB4920059B343 /* NetworkingService+ReadingText.swift in Sources */,
 				FE4FF8B02BCA9AC90059B343 /* Modules.swift in Sources */,
 				FE4FF8982BCA9A700059B343 /* AppDelegate.swift in Sources */,
+				FE4FF8C52BCB07EE0059B343 /* NetworkingService+ListeningAudio.swift in Sources */,
 				FE4FF8BD2BCABF1D0059B343 /* ReadingTextPage.swift in Sources */,
 				FE4FF8BB2BCABD630059B343 /* ModulePageModel.swift in Sources */,
 				FE4FF89A2BCA9A700059B343 /* SceneDelegate.swift in Sources */,
 				FE4FF8B32BCA9E1B0059B343 /* Router.swift in Sources */,
+				FE4FF8C32BCB07550059B343 /* ListeningAudioPage.swift in Sources */,
 				FE4FF8B52BCAB2BB0059B343 /* NetworkingService.swift in Sources */,
 				FE4FF8AF2BCA9AC90059B343 /* MainPage.swift in Sources */,
 			);

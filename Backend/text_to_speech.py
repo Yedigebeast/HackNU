@@ -9,14 +9,12 @@ base_url = "https://bff.listnr.tech/api/tts/v1/"
 endpoint = "convert-text"
 
 # Your API key
-api_key = "EV5CRHE-M43415B-N9N4ZEB-FWSST35"
+api_key = "YERX3DC-Q45MAYZ-GABZSD7-N8E1S7V"
 
 # Construct the headers with the API key
 headers = {
     "Content-Type": "application/json",
-    "x-listnr-token": api_key,
-    "globalSpeed": "100%"
-
+    "x-listnr-token": api_key
 }
 
 voice_id = "kk-KZ-AigulNeural"
@@ -27,7 +25,6 @@ def audio():
     data = {
         "voice": voice_id,
         "ssml": f"<speak>{text}</speak>",
-        "globalSpeed": "100%",
     }
     response = requests.post(base_url + endpoint, headers=headers, data=json.dumps(data))
     if response.status_code == 200:

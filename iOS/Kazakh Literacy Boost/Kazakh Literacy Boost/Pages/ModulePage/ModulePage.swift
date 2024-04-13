@@ -73,7 +73,7 @@ struct ModulePage: View {
                     shouldHideCheckButton: $shouldHideCheckButton,
                     checkButtonPressed: $checkButtonPressed)
             case .listening:
-                Text(dataModel.module.text)
+                ListeningAudioPage(dataModel: dataModel)
             case .speaking:
                 Text(dataModel.module.text)
             }

@@ -233,7 +233,7 @@ extension ReadingTextPage: ReadingTextRequestDelegate {
     }
     
     func failWithError(error: any Error) {
-        print("ты далбан едіге:, \(error)")
+        print("ты далбан едіге, ошибка в ReadingTextPage:, \(error)")
         performReadingTextRequest()
     }
 }
