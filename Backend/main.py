@@ -22,9 +22,8 @@ def reading_words_list():
 def listening(request: Request):
     audio_result = audio() or ("default text", "default audio_url")
     text, audio_url = audio_result
-    text_encoded = text.encode('utf-8').decode('utf-8')
-    print(f"FuncText: {text_encoded}, {audio_url}")
-    return {"text": text_encoded, "audio": audio_url}
+    print(f"FuncText: {text}, {audio_url}")
+    return {"text": text, "audio": audio_url}
 
 
 

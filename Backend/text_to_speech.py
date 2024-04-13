@@ -34,7 +34,7 @@ def audio():
             audio_url = result.get("url")
             if audio_url:
                 text_encoded = text.encode('utf-8').decode('utf-8')
-                return text_encoded, audio_url
+                return text_encoded.split(), audio_url
             else:
                 print("No audio URL found in the response.")
         except json.JSONDecodeError:
