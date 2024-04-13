@@ -5,13 +5,13 @@ from Backend.text_to_speech import audio
 import re
 from Backend.Text import *
 from Backend.User import *
+from Backend.CallRequest import *
 
 app = FastAPI()
 
 @app.get("")
 def index(request: Request):
     return "works"
-    pass
 
 
 @app.get("/reading/text")
@@ -40,10 +40,14 @@ def login(email: str = None, password: str = None):
         return True
     else:
         return RedirectResponse(url="/register")
-    pass
 
 @app.post("/register")
 def register(email: str, password: str):
     if not find_user(email=email, password=password):
         add_user(email=email, password=password)
-    pass
+
+@app.post("/request/{user_email}/{interest_id}")
+def create_request():
+    user = find_user(email=user_email)
+    interest = find_interest(id=interest_id)
+    add_request(user=user, interest=interest)

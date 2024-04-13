@@ -29,7 +29,7 @@ def add_user(email: str, password: str, first_name: str = None, last_name: str =
     session.add(db_user)
     session.commit()
 
-def find_user(email: str, password: str):
+def find_user(email: str):
     print(email, password)
     query = "SELECT * FROM users WHERE email = :email AND password = :password, {'email': email, 'password': password}"
     result = session.execute(query, {'email': email, 'password': password})

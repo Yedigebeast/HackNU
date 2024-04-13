@@ -22,7 +22,7 @@ def add_interest(name: str):
     session.add(db_interest)
     session.commit()
 
-def find_interest(name: str):
+def find_interest(name: str = None, id: Integer = None):
     return session.query(Interest).filter_by(name=name).first()
 
 def delete_interest(name: str):
