@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a980c99-20aa-40c9-932f-a7cc96c8487e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Text.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Text.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +58,9 @@
       <workItem from="1712997575101" duration="49000" />
       <workItem from="1712997650727" duration="140000" />
       <workItem from="1712997800630" duration="3819000" />
+      <workItem from="1713005016506" duration="322000" />
+      <workItem from="1713005384358" duration="308000" />
+      <workItem from="1713005738036" duration="233000" />
     </task>
     <servers />
   </component>
@@ -64,6 +68,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HackNU$main.coverage" NAME="main Coverage Results" MODIFIED="1713004960884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backend" />
+    <SUITE FILE_PATH="coverage/HackNU$main.coverage" NAME="main Coverage Results" MODIFIED="1713005781174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backend" />
   </component>
 </project>
