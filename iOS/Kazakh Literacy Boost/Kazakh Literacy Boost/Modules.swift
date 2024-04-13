@@ -17,7 +17,7 @@ enum Modules: CaseIterable {
     var text: String {
         switch self {
         case .words:
-            "Сөздер"
+            "Сөздік"
         case .reading:
             "Оқу"
         case .listening:

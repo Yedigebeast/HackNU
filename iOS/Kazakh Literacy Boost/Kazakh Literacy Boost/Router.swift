@@ -11,6 +11,7 @@ import SwiftUI
 
 class Router {
     private let navigationController: UINavigationController
+    private let networkingService = NetworkingService()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -23,7 +24,15 @@ class Router {
     }
     
     func pushModulePage(module: Modules) {
-        let vc = UIHostingController(rootView: ModulePage(module: module, router: self))
+        let vc = UIHostingController(
+            rootView: ModulePage(
+                dataModel: ModulePageModel(
+                    module: module,
+                    router: self,
+                    networkingService: self.networkingService
+                )
+            )
+        )
         navigationController.pushViewController(vc, animated: true)
     }
     

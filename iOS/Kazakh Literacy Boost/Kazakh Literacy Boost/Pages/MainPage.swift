@@ -30,13 +30,15 @@ struct MainPage: View {
                             Button {
                                 router.pushModulePage(module: module)
                             } label: {
-                                Text(module.text)
-                                    .frame(width: 150, height: 150, alignment: .center)
-                                    .background(module.backgroundColor)
-                                    .cornerRadius(75)
-                                    .foregroundColor(.white)
-                                    .font(.title)
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 75)
+                                        .fill(module.backgroundColor)
+                                    Text(module.text)
+                                        .font(.title)
+                                        .foregroundStyle(.white)
+                                }
                             }
+                            .frame(width: 150, height: 150)
                         }
                     }
                 }

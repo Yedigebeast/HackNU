@@ -15,6 +15,10 @@
 		FE4FF8AF2BCA9AC90059B343 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8AC2BCA9AC90059B343 /* MainPage.swift */; };
 		FE4FF8B02BCA9AC90059B343 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8AD2BCA9AC90059B343 /* Modules.swift */; };
 		FE4FF8B32BCA9E1B0059B343 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8B22BCA9E1B0059B343 /* Router.swift */; };
+		FE4FF8B52BCAB2BB0059B343 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8B42BCAB2BB0059B343 /* NetworkingService.swift */; };
+		FE4FF8B92BCAB4920059B343 /* NetworkingService+ReadingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8B82BCAB4920059B343 /* NetworkingService+ReadingText.swift */; };
+		FE4FF8BB2BCABD630059B343 /* ModulePageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8BA2BCABD630059B343 /* ModulePageModel.swift */; };
+		FE4FF8BD2BCABF1D0059B343 /* ReadingTextPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8BC2BCABF1D0059B343 /* ReadingTextPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		FE4FF8AC2BCA9AC90059B343 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		FE4FF8AD2BCA9AC90059B343 /* Modules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		FE4FF8B22BCA9E1B0059B343 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FE4FF8B42BCAB2BB0059B343 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		FE4FF8B82BCAB4920059B343 /* NetworkingService+ReadingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkingService+ReadingText.swift"; sourceTree = "<group>"; };
+		FE4FF8BA2BCABD630059B343 /* ModulePageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePageModel.swift; sourceTree = "<group>"; };
+		FE4FF8BC2BCABF1D0059B343 /* ReadingTextPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingTextPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 				FE4FF8AD2BCA9AC90059B343 /* Modules.swift */,
 				FE4FF8B22BCA9E1B0059B343 /* Router.swift */,
 				FE4FF8B12BCA9DFE0059B343 /* Pages */,
+				FE4FF8B72BCAB2C30059B343 /* NetworkingService */,
 				FE4FF8A02BCA9A710059B343 /* Assets.xcassets */,
 				FE4FF8A22BCA9A710059B343 /* LaunchScreen.storyboard */,
 				FE4FF8A52BCA9A710059B343 /* Info.plist */,
@@ -76,9 +85,36 @@
 			isa = PBXGroup;
 			children = (
 				FE4FF8AC2BCA9AC90059B343 /* MainPage.swift */,
-				FE4FF8AB2BCA9AC90059B343 /* ModulePage.swift */,
+				FE4FF8BF2BCABFD90059B343 /* ModulePage */,
+				FE4FF8BE2BCABF350059B343 /* DataModel */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		FE4FF8B72BCAB2C30059B343 /* NetworkingService */ = {
+			isa = PBXGroup;
+			children = (
+				FE4FF8B42BCAB2BB0059B343 /* NetworkingService.swift */,
+				FE4FF8B82BCAB4920059B343 /* NetworkingService+ReadingText.swift */,
+			);
+			path = NetworkingService;
+			sourceTree = "<group>";
+		};
+		FE4FF8BE2BCABF350059B343 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE4FF8BA2BCABD630059B343 /* ModulePageModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		FE4FF8BF2BCABFD90059B343 /* ModulePage */ = {
+			isa = PBXGroup;
+			children = (
+				FE4FF8AB2BCA9AC90059B343 /* ModulePage.swift */,
+				FE4FF8BC2BCABF1D0059B343 /* ReadingTextPage.swift */,
+			);
+			path = ModulePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,10 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4FF8AE2BCA9AC90059B343 /* ModulePage.swift in Sources */,
+				FE4FF8B92BCAB4920059B343 /* NetworkingService+ReadingText.swift in Sources */,
 				FE4FF8B02BCA9AC90059B343 /* Modules.swift in Sources */,
 				FE4FF8982BCA9A700059B343 /* AppDelegate.swift in Sources */,
+				FE4FF8BD2BCABF1D0059B343 /* ReadingTextPage.swift in Sources */,
+				FE4FF8BB2BCABD630059B343 /* ModulePageModel.swift in Sources */,
 				FE4FF89A2BCA9A700059B343 /* SceneDelegate.swift in Sources */,
 				FE4FF8B32BCA9E1B0059B343 /* Router.swift in Sources */,
+				FE4FF8B52BCAB2BB0059B343 /* NetworkingService.swift in Sources */,
 				FE4FF8AF2BCA9AC90059B343 /* MainPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
