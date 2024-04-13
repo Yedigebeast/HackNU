@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class ModulePageModel: ObservableObject {
     let module: Modules
@@ -13,9 +14,8 @@ class ModulePageModel: ObservableObject {
     let networkingService: NetworkingService
     
     var requestRunCount = 0
-    var shuffledReadingText = [String]()
     
-    @Published var readingText = [String]()
+    var audioPlayer: AVAudioPlayer?
     
     init(module: Modules, router: Router, networkingService: NetworkingService) {
         self.module = module

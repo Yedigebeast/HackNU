@@ -13,9 +13,22 @@ protocol ListeninAudioRequestDelegate {
 }
 
 extension NetworkingService {
+    func downloadAudioFileFromURL(urlString: String,  audioURL: @escaping ((URL) -> ())) {
+        if let url = URL(string: urlString){
+            let task = URLSession.shared.downloadTask(with: url) { [audioURL] newAudioURL, response, error in
+                if let error {
+                    print(#function, "error: \(error)")
+                }
+                if let newAudioURL {
+                    audioURL(newAudioURL)
+                }
+            }
+            task.resume()
+        }
+    }
+    
     func getListeningAudio() {
         let url = "\(baseURL)/listening/audio"
-        print(url)
         performListeningAudioRequest(with: url)
     }
     
@@ -30,21 +43,18 @@ extension NetworkingService {
                 if let safedata = data {
                     let (text, audio) = self.parseListeningAudioJson(safedata)
                     if let text, let audio {
-                        print("2: ", text, audio)
                         self.listeningAudioDelegate?.didReceive(text: text, audioLink: audio)
                     }
                 }
             }
             task.resume()
         }
-        
     }
     
     private func parseListeningAudioJson(_ data: Data) -> ([String]?, String?) {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(audioData.self, from: data)
-            print(decodedData.text, decodedData.audio)
             return (decodedData.text, decodedData.audio)
         } catch {
             self.listeningAudioDelegate?.failWithError(error: error)

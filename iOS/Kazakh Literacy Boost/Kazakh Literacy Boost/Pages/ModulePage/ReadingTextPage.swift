@@ -21,13 +21,16 @@ struct ReadingTextPage: View {
     
     @State var textAtCells = [String]()
     @State var pressedReadingText: String = ""
+    @State var readingText = [String]()
+    @State var shuffledReadingText = [String]()
+    
     
     var body: some View {
         ZStack {
             VStack {
                 ScrollView(.vertical) {
                     VStack {
-                        ForEach(0..<dataModel.readingText.count, id: \.self) { index in
+                        ForEach(0..<readingText.count, id: \.self) { index in
                             textCell(
                                 index: index,
                                 pressedText: $pressedReadingText,
@@ -39,7 +42,7 @@ struct ReadingTextPage: View {
                 }
                 ScrollView(.horizontal) {
                     HStack(spacing: 16) {
-                        ForEach(dataModel.shuffledReadingText, id: \.self) { word in
+                        ForEach(shuffledReadingText, id: \.self) { word in
                             PressableCell(word: word, pressedReadingText: $pressedReadingText)
                         }
                     }
@@ -94,18 +97,18 @@ struct ReadingTextPage: View {
                                         .opacity(0.12)
                                     VStack {
                                         Text("Жауабын көрсету")
-                                            .font(.system(size: 12))
+                                            .font(.system(size: 16))
                                     }
                                 }
-                                .frame(width: 120, height: 32)
+                                .frame(width: 200, height: 32)
                             }
 
                             Spacer()
-                                .frame(height: 8)
+                                .frame(height: 16)
                         }
                         Text(checkAnswer() ? "✅" : "❌")
                     }
-                }.frame(width: 150, height: 150)
+                }.frame(width: 250, height: 250)
             }
         }
         .padding(.horizontal)
@@ -117,8 +120,8 @@ struct ReadingTextPage: View {
     
     private func start() {
         shouldHideCheckButton = true
-        dataModel.readingText = [String]()
-        dataModel.shuffledReadingText = [String]()
+        readingText = [String]()
+        shuffledReadingText = [String]()
         textAtCells = [String]()
         dataModel.requestRunCount = 0
         pressedReadingText = ""
@@ -127,13 +130,13 @@ struct ReadingTextPage: View {
     
     private func putCorrectAnswer() {
         for i in 0..<textAtCells.count {
-            textAtCells[i] = dataModel.readingText[i]
+            textAtCells[i] = readingText[i]
         }
     }
     
     private func performReadingTextRequest() {
         dataModel.requestRunCount += 1
-        if (dataModel.requestRunCount >= 5 && dataModel.readingText.isEmpty) {
+        if (dataModel.requestRunCount >= 5 && readingText.isEmpty) {
             print("yedige, please turn on the internet")
         } else {
             dataModel.networkingService.getReadingText()
@@ -141,8 +144,8 @@ struct ReadingTextPage: View {
     }
     
     private func checkAnswer() -> Bool {
-        for i in 0..<dataModel.readingText.count {
-            if dataModel.readingText[i] != textAtCells[i] {
+        for i in 0..<readingText.count {
+            if readingText[i] != textAtCells[i] {
                 return false
             }
         }
@@ -227,8 +230,8 @@ extension ReadingTextPage: ReadingTextRequestDelegate {
         DispatchQueue.main.async {
             print(readingText)
             textAtCells = Array(repeating: "", count: readingText.count)
-            dataModel.readingText = readingText
-            dataModel.shuffledReadingText = readingText.shuffled()
+            self.readingText = readingText
+            shuffledReadingText = readingText.shuffled()
         }
     }
     
