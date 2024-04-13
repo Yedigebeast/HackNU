@@ -14,9 +14,6 @@ class Text(Base):
     def __init__(self, text):
         self.text = text
 
-    # def __repr__(self):
-    #     return f"{self.title} {self.content} {self.category} {self.image} {self.url}"
-
 
 engine = create_engine("sqlite:///texts.db", echo=True)
 Base.metadata.create_all(bind=engine)
@@ -38,7 +35,6 @@ def add_text_DB(text: str):
 
 
 
-# Print each row
 def print_db():
     all_elements = session.query(Text).all()
     for element in all_elements:
