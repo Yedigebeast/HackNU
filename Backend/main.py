@@ -6,7 +6,7 @@ import re
 from Backend.Text import *
 from Backend.User import *
 from Backend.CallRequest import *
-
+from Backend.meeting import speaking_meeting_link
 app = FastAPI()
 
 @app.get("")
@@ -62,3 +62,7 @@ def create_request(user_email: str, interest_id: int):
     user = find_user(email=user_email)
     interest = find_interest(id=interest_id)
     add_request(user=user, interest=interest)
+
+@app.get("/speaking/gogo")
+def speaking():
+    return {"meeting_link": speaking_meeting_link()}
