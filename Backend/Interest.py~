@@ -27,7 +27,10 @@ def find_interest(name: str = None, id: Integer = None):
 
 def delete_interest(name: str):
     db_interest = find_interest(name=name)
+<<<<<<< HEAD
     if db_interest != None:
         session.delete(db_interest)
+=======
     if db_interest is not None:
         session.delete(db_interest)
+>>>>>>> 462c75a (finishing)
