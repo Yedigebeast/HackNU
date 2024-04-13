@@ -33,9 +33,19 @@ struct MainPage: View {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 75)
                                         .fill(module.backgroundColor)
-                                    Text(module.text)
-                                        .font(.title)
-                                        .foregroundStyle(.white)
+                                    VStack {
+                                        Spacer()
+                                        Image(systemName: module.systemName)
+                                            .resizable()
+                                            .frame(width: 64, height: 64)
+                                            .foregroundStyle(.white)
+                                        Spacer()
+                                            .frame(height: 8)
+                                        Text(module.text)
+                                            .font(.system(size: 18))
+                                            .foregroundStyle(.white)
+                                        Spacer()
+                                    }
                                 }
                             }
                             .frame(width: 150, height: 150)

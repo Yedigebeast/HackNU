@@ -39,4 +39,17 @@ enum Modules: CaseIterable {
             Color(red: 0.682, green: 0.612, blue: 0.908)
         }
     }
+    
+    var systemName: String {
+        switch self {
+        case .words:
+            "list.bullet.circle"
+        case .reading:
+            "text.viewfinder"
+        case .listening:
+            "headphones.circle"
+        case .speaking:
+            "speaker.wave.2.circle"
+        }
+    }
 }

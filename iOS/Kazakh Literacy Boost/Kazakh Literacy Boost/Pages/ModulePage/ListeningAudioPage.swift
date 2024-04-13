@@ -190,7 +190,7 @@ extension ListeningAudioPage: ListeninAudioRequestDelegate {
     }
     
     func failWithError(error: any Error) {
-        print("ты далбан едіге, ошибка в ListeningAudioPage:, \(error)")
+        print("ты далбан едіге, ошибка в ListeningAudioPage: \(error)")
         performListeningAudioRequest()
     }
 }
