@@ -1,13 +1,8 @@
 from sqlalchemy import Column, String, Integer
 import requests, random
-<<<<<<< HEAD
-
-Base = declarative_base()
-=======
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
->>>>>>> fa5b984 (finishingn login)
 
 Base = declarative_base()
 
@@ -19,15 +14,10 @@ class Text(Base):
     def __init__(self, text):
         self.text = text
 
-<<<<<<< HEAD
-
-engine = create_engine("sqlite:///texts.db", echo=True)
-=======
     # def __repr__(self):
     #     return f"{self.title} {self.content} {self.category} {self.image} {self.url}"
 
 engine = create_engine("sqlite:///texts.db")
->>>>>>> fa5b984 (finishingn login)
 Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()

@@ -1,11 +1,8 @@
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import RedirectResponse
 import json
-<<<<<<< HEAD
 from Backend.Text import *
 from Backend.text_to_speech import audio
-=======
->>>>>>> fa5b984 (finishingn login)
 import re
 from Backend.Text import *
 from Backend.User import *
