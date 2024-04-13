@@ -2,6 +2,7 @@ from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import requests, random
+
 Base = declarative_base()
 
 
@@ -9,7 +10,6 @@ class Text(Base):
     __tablename__ = "texts"
     id = Column("id", Integer, primary_key=True, autoincrement=True)
     text = Column("text", String)
-
 
     def __init__(self, text):
         self.text = text
@@ -32,9 +32,6 @@ def add_text_DB(text: str):
         return False
 
 
-
-
-
 def print_db():
     all_elements = session.query(Text).all()
     for element in all_elements:
@@ -42,8 +39,13 @@ def print_db():
 
 
 def text_to_words():
-    random_text = random.choice(session.query(Text).all()).text
+    random_text = get_random_text()
     return random_text.split()
+
+
+def get_random_text():
+    return random.choice(session.query(Text).all()).text
+
 
 def delete_db():
     session.query(Text).delete()
