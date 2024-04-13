@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 Base = declarative_base()
 
 class Interest(Base):
-    __tablename__ = 'users'
+    __tablename__ = 'interests'
     id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
     name = Column(String())
     def __init__(self, name):
@@ -18,7 +18,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 def add_interest(name: str):
-    db_interest = Interest(name)
+    db_interest = Interest(name=name)
     session.add(db_interest)
     session.commit()
 
@@ -27,5 +27,10 @@ def find_interest(name: str = None, id: Integer = None):
 
 def delete_interest(name: str):
     db_interest = find_interest(name=name)
+<<<<<<< HEAD
     if db_interest != None:
         session.delete(db_interest)
+=======
+    if db_interest is not None:
+        session.delete(db_interest)
+>>>>>>> 462c75a (finishing)

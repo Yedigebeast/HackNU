@@ -36,18 +36,32 @@ def users_list():
 
 @app.get("/sign")
 def login(email: str = None, password: str = None):
-    if find_user(email=email, password=password):
+    if find_user(email=email):
         return True
     else:
         return RedirectResponse(url="/register")
 
 @app.post("/register")
 def register(email: str, password: str):
+<<<<<<< HEAD
     if not find_user(email=email, password=password):
         add_user(email=email, password=password)
 
 @app.post("/request/{user_email}/{interest_id}")
 def create_request():
+=======
+    if not find_user(email=email):
+        user = add_user(email=email, password=password)
+        return {'user': user}
+
+@app.get("/interest/{name}")
+def create_interest(name: str):
+    interest = add_interest(name=name) 
+    return {'interest': interest.name}
+
+@app.get("/request/{user_email}/{interest_id}")
+def create_request(user_email: str, interest_id: int):
+>>>>>>> 462c75a (finishing)
     user = find_user(email=user_email)
     interest = find_interest(id=interest_id)
     add_request(user=user, interest=interest)

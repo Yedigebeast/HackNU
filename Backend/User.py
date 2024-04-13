@@ -33,10 +33,10 @@ def find_user(email: str):
     print(email, password)
     query = "SELECT * FROM users WHERE email = :email AND password = :password, {'email': email, 'password': password}"
     result = session.execute(query, {'email': email, 'password': password})
-    #if res is not None
-    #    return True
-    #else:
-    #    return False
+    if res is not None:
+        return True
+    else:
+        return False
 
 def get_users():
     users = session.query(User).all()
