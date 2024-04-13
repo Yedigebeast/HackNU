@@ -7,22 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE4FF8782BCA78440059B343 /* Kazakh_Literacy_BoostApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8772BCA78440059B343 /* Kazakh_Literacy_BoostApp.swift */; };
-		FE4FF87A2BCA78440059B343 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8792BCA78440059B343 /* ContentView.swift */; };
-		FE4FF87C2BCA78440059B343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4FF87B2BCA78440059B343 /* Assets.xcassets */; };
-		FE4FF87F2BCA78440059B343 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4FF87E2BCA78440059B343 /* Preview Assets.xcassets */; };
+		FE4FF8982BCA9A700059B343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8972BCA9A700059B343 /* AppDelegate.swift */; };
+		FE4FF89A2BCA9A700059B343 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8992BCA9A700059B343 /* SceneDelegate.swift */; };
+		FE4FF8A12BCA9A710059B343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4FF8A02BCA9A710059B343 /* Assets.xcassets */; };
+		FE4FF8A42BCA9A710059B343 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FE4FF8A32BCA9A710059B343 /* Base */; };
+		FE4FF8AE2BCA9AC90059B343 /* ModulePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8AB2BCA9AC90059B343 /* ModulePage.swift */; };
+		FE4FF8AF2BCA9AC90059B343 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8AC2BCA9AC90059B343 /* MainPage.swift */; };
+		FE4FF8B02BCA9AC90059B343 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8AD2BCA9AC90059B343 /* Modules.swift */; };
+		FE4FF8B32BCA9E1B0059B343 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FF8B22BCA9E1B0059B343 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE4FF8742BCA78440059B343 /* Kazakh Literacy Boost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kazakh Literacy Boost.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE4FF8772BCA78440059B343 /* Kazakh_Literacy_BoostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kazakh_Literacy_BoostApp.swift; sourceTree = "<group>"; };
-		FE4FF8792BCA78440059B343 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FE4FF87B2BCA78440059B343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE4FF87E2BCA78440059B343 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE4FF8942BCA9A700059B343 /* Kazakh Literacy Boost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kazakh Literacy Boost.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4FF8972BCA9A700059B343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE4FF8992BCA9A700059B343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE4FF8A02BCA9A710059B343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE4FF8A32BCA9A710059B343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE4FF8A52BCA9A710059B343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE4FF8AB2BCA9AC90059B343 /* ModulePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulePage.swift; sourceTree = "<group>"; };
+		FE4FF8AC2BCA9AC90059B343 /* MainPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		FE4FF8AD2BCA9AC90059B343 /* Modules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
+		FE4FF8B22BCA9E1B0059B343 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE4FF8712BCA78430059B343 /* Frameworks */ = {
+		FE4FF8912BCA9A700059B343 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,51 +41,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE4FF86B2BCA78430059B343 = {
+		FE4FF88B2BCA9A700059B343 = {
 			isa = PBXGroup;
 			children = (
-				FE4FF8762BCA78440059B343 /* Kazakh Literacy Boost */,
-				FE4FF8752BCA78440059B343 /* Products */,
+				FE4FF8962BCA9A700059B343 /* Kazakh Literacy Boost */,
+				FE4FF8952BCA9A700059B343 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FE4FF8752BCA78440059B343 /* Products */ = {
+		FE4FF8952BCA9A700059B343 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE4FF8742BCA78440059B343 /* Kazakh Literacy Boost.app */,
+				FE4FF8942BCA9A700059B343 /* Kazakh Literacy Boost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE4FF8762BCA78440059B343 /* Kazakh Literacy Boost */ = {
+		FE4FF8962BCA9A700059B343 /* Kazakh Literacy Boost */ = {
 			isa = PBXGroup;
 			children = (
-				FE4FF8772BCA78440059B343 /* Kazakh_Literacy_BoostApp.swift */,
-				FE4FF8792BCA78440059B343 /* ContentView.swift */,
-				FE4FF87B2BCA78440059B343 /* Assets.xcassets */,
-				FE4FF87D2BCA78440059B343 /* Preview Content */,
+				FE4FF8972BCA9A700059B343 /* AppDelegate.swift */,
+				FE4FF8992BCA9A700059B343 /* SceneDelegate.swift */,
+				FE4FF8AD2BCA9AC90059B343 /* Modules.swift */,
+				FE4FF8B22BCA9E1B0059B343 /* Router.swift */,
+				FE4FF8B12BCA9DFE0059B343 /* Pages */,
+				FE4FF8A02BCA9A710059B343 /* Assets.xcassets */,
+				FE4FF8A22BCA9A710059B343 /* LaunchScreen.storyboard */,
+				FE4FF8A52BCA9A710059B343 /* Info.plist */,
 			);
 			path = "Kazakh Literacy Boost";
 			sourceTree = "<group>";
 		};
-		FE4FF87D2BCA78440059B343 /* Preview Content */ = {
+		FE4FF8B12BCA9DFE0059B343 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				FE4FF87E2BCA78440059B343 /* Preview Assets.xcassets */,
+				FE4FF8AC2BCA9AC90059B343 /* MainPage.swift */,
+				FE4FF8AB2BCA9AC90059B343 /* ModulePage.swift */,
 			);
-			path = "Preview Content";
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE4FF8732BCA78430059B343 /* Kazakh Literacy Boost */ = {
+		FE4FF8932BCA9A700059B343 /* Kazakh Literacy Boost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE4FF8822BCA78440059B343 /* Build configuration list for PBXNativeTarget "Kazakh Literacy Boost" */;
+			buildConfigurationList = FE4FF8A82BCA9A710059B343 /* Build configuration list for PBXNativeTarget "Kazakh Literacy Boost" */;
 			buildPhases = (
-				FE4FF8702BCA78430059B343 /* Sources */,
-				FE4FF8712BCA78430059B343 /* Frameworks */,
-				FE4FF8722BCA78430059B343 /* Resources */,
+				FE4FF8902BCA9A700059B343 /* Sources */,
+				FE4FF8912BCA9A700059B343 /* Frameworks */,
+				FE4FF8922BCA9A700059B343 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +98,25 @@
 			);
 			name = "Kazakh Literacy Boost";
 			productName = "Kazakh Literacy Boost";
-			productReference = FE4FF8742BCA78440059B343 /* Kazakh Literacy Boost.app */;
+			productReference = FE4FF8942BCA9A700059B343 /* Kazakh Literacy Boost.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FE4FF86C2BCA78430059B343 /* Project object */ = {
+		FE4FF88C2BCA9A700059B343 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					FE4FF8732BCA78430059B343 = {
+					FE4FF8932BCA9A700059B343 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
-			buildConfigurationList = FE4FF86F2BCA78430059B343 /* Build configuration list for PBXProject "Kazakh Literacy Boost" */;
+			buildConfigurationList = FE4FF88F2BCA9A700059B343 /* Build configuration list for PBXProject "Kazakh Literacy Boost" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +124,57 @@
 				en,
 				Base,
 			);
-			mainGroup = FE4FF86B2BCA78430059B343;
-			productRefGroup = FE4FF8752BCA78440059B343 /* Products */;
+			mainGroup = FE4FF88B2BCA9A700059B343;
+			productRefGroup = FE4FF8952BCA9A700059B343 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE4FF8732BCA78430059B343 /* Kazakh Literacy Boost */,
+				FE4FF8932BCA9A700059B343 /* Kazakh Literacy Boost */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FE4FF8722BCA78430059B343 /* Resources */ = {
+		FE4FF8922BCA9A700059B343 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE4FF87F2BCA78440059B343 /* Preview Assets.xcassets in Resources */,
-				FE4FF87C2BCA78440059B343 /* Assets.xcassets in Resources */,
+				FE4FF8A12BCA9A710059B343 /* Assets.xcassets in Resources */,
+				FE4FF8A42BCA9A710059B343 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FE4FF8702BCA78430059B343 /* Sources */ = {
+		FE4FF8902BCA9A700059B343 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE4FF87A2BCA78440059B343 /* ContentView.swift in Sources */,
-				FE4FF8782BCA78440059B343 /* Kazakh_Literacy_BoostApp.swift in Sources */,
+				FE4FF8AE2BCA9AC90059B343 /* ModulePage.swift in Sources */,
+				FE4FF8B02BCA9AC90059B343 /* Modules.swift in Sources */,
+				FE4FF8982BCA9A700059B343 /* AppDelegate.swift in Sources */,
+				FE4FF89A2BCA9A700059B343 /* SceneDelegate.swift in Sources */,
+				FE4FF8B32BCA9E1B0059B343 /* Router.swift in Sources */,
+				FE4FF8AF2BCA9AC90059B343 /* MainPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		FE4FF8A22BCA9A710059B343 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE4FF8A32BCA9A710059B343 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		FE4FF8802BCA78440059B343 /* Debug */ = {
+		FE4FF8A62BCA9A710059B343 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +237,7 @@
 			};
 			name = Debug;
 		};
-		FE4FF8812BCA78440059B343 /* Release */ = {
+		FE4FF8A72BCA9A710059B343 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,22 +293,19 @@
 			};
 			name = Release;
 		};
-		FE4FF8832BCA78440059B343 /* Debug */ = {
+		FE4FF8A92BCA9A710059B343 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kazakh Literacy Boost/Preview Content\"";
 				DEVELOPMENT_TEAM = 3A2U2X4K87;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Kazakh Literacy Boost/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,22 +319,19 @@
 			};
 			name = Debug;
 		};
-		FE4FF8842BCA78440059B343 /* Release */ = {
+		FE4FF8AA2BCA9A710059B343 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kazakh Literacy Boost/Preview Content\"";
 				DEVELOPMENT_TEAM = 3A2U2X4K87;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Kazakh Literacy Boost/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,25 +348,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE4FF86F2BCA78430059B343 /* Build configuration list for PBXProject "Kazakh Literacy Boost" */ = {
+		FE4FF88F2BCA9A700059B343 /* Build configuration list for PBXProject "Kazakh Literacy Boost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE4FF8802BCA78440059B343 /* Debug */,
-				FE4FF8812BCA78440059B343 /* Release */,
+				FE4FF8A62BCA9A710059B343 /* Debug */,
+				FE4FF8A72BCA9A710059B343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE4FF8822BCA78440059B343 /* Build configuration list for PBXNativeTarget "Kazakh Literacy Boost" */ = {
+		FE4FF8A82BCA9A710059B343 /* Build configuration list for PBXNativeTarget "Kazakh Literacy Boost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE4FF8832BCA78440059B343 /* Debug */,
-				FE4FF8842BCA78440059B343 /* Release */,
+				FE4FF8A92BCA9A710059B343 /* Debug */,
+				FE4FF8AA2BCA9A710059B343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FE4FF86C2BCA78430059B343 /* Project object */;
+	rootObject = FE4FF88C2BCA9A700059B343 /* Project object */;
 }
