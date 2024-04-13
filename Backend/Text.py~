@@ -1,13 +1,8 @@
 from sqlalchemy import Column, String, Integer
 import requests, random
-<<<<<<< HEAD
-
-Base = declarative_base()
-=======
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
->>>>>>> fa5b984 (finishingn login)
 
 Base = declarative_base()
 
@@ -16,21 +11,16 @@ class Text(Base):
     id = Column("id", Integer, primary_key=True, autoincrement=True)
     text = Column("text", String)
 
+
     def __init__(self, text):
         self.text = text
 
-<<<<<<< HEAD
-
-engine = create_engine("sqlite:///texts.db", echo=True)
-=======
     # def __repr__(self):
     #     return f"{self.title} {self.content} {self.category} {self.image} {self.url}"
 
 engine = create_engine("sqlite:///texts.db")
->>>>>>> fa5b984 (finishingn login)
 Base.metadata.create_all(bind=engine)
-Session = sessionmaker(bind=engine)
-session = Session()
+session = sessionmaker(bind=engine)
 
 
 def add_text_DB(text: str):
@@ -44,6 +34,10 @@ def add_text_DB(text: str):
         return False
 
 
+
+
+
+# Print each row
 def print_db():
     all_elements = session.query(Text).all()
     for element in all_elements:
@@ -51,13 +45,8 @@ def print_db():
 
 
 def text_to_words():
-    random_text = get_random_text()
+    random_text = random.choice(session.query(Text).all()).text
     return random_text.split()
-
-
-def get_random_text():
-    return random.choice(session.query(Text).all()).text
-
 
 def delete_db():
     session.query(Text).delete()

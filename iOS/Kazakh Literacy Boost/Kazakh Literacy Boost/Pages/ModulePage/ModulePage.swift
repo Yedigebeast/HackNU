@@ -43,6 +43,7 @@ struct ModulePage: View {
                             } label: {
                                 Text("Тексеру")
                                     .foregroundStyle(Color(red: 0.1, green: 0.42, blue: 0.58))
+                                    .bold()
                             }
                         }
                         Spacer()

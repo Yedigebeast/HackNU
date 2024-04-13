@@ -10,7 +10,7 @@ import SwiftUI
 
 fileprivate struct Constants {
     struct Images {
-        static let closeButton = UIImage(named: "closeButton")!
+        static let buttonBackground = UIImage(named: "buttonBackground")!
     }
 }
 
@@ -56,15 +56,52 @@ struct ReadingTextPage: View {
                                 .frame(height: 8)
                             HStack {
                                 Spacer()
+                                    .frame(width: 8)
+                                Button {
+                                    checkButtonPressed = false
+                                    start()
+                                } label: {
+                                    ZStack {
+                                        Image(uiImage: Constants.Images.buttonBackground)
+                                        Image(systemName: "goforward")
+                                            .foregroundStyle(.black)
+                                    }
+                                }
+                                
+                                Spacer()
+                                
                                 Button {
                                     checkButtonPressed = false
                                 } label: {
-                                    Image(uiImage: Constants.Images.closeButton)
+                                    ZStack {
+                                        Image(uiImage: Constants.Images.buttonBackground)
+                                        Image(systemName: "xmark")
+                                            .foregroundStyle(.black)
+                                    }
                                 }
                                 Spacer()
                                     .frame(width: 8)
                             }
                             Spacer()
+                        
+                            Button {
+                                checkButtonPressed = false
+                                putCorrectAnswer()
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(Color(red: 0.46, green: 0.46, blue: 0.5))
+                                        .opacity(0.12)
+                                    VStack {
+                                        Text("Жауабын көрсету")
+                                            .font(.system(size: 12))
+                                    }
+                                }
+                                .frame(width: 120, height: 32)
+                            }
+
+                            Spacer()
+                                .frame(height: 8)
                         }
                         Text(checkAnswer() ? "✅" : "❌")
                     }
@@ -74,8 +111,23 @@ struct ReadingTextPage: View {
         .padding(.horizontal)
         .onAppear {
             dataModel.networkingService.readingTextDelegate = self
-            dataModel.requestRunCount = 0
-            performReadingTextRequest()
+            start()
+        }
+    }
+    
+    private func start() {
+        shouldHideCheckButton = true
+        dataModel.readingText = [String]()
+        dataModel.shuffledReadingText = [String]()
+        textAtCells = [String]()
+        dataModel.requestRunCount = 0
+        pressedReadingText = ""
+        performReadingTextRequest()
+    }
+    
+    private func putCorrectAnswer() {
+        for i in 0..<textAtCells.count {
+            textAtCells[i] = dataModel.readingText[i]
         }
     }
     
@@ -88,7 +140,7 @@ struct ReadingTextPage: View {
         }
     }
     
-    func checkAnswer() -> Bool {
+    private func checkAnswer() -> Bool {
         for i in 0..<dataModel.readingText.count {
             if dataModel.readingText[i] != textAtCells[i] {
                 return false
@@ -123,7 +175,7 @@ fileprivate struct textCell: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 16)
                         .fill(Color(red: 0.984, green: 0.752, blue: 0.357))
-                    Text(textAtCells[index])
+                    Text((index < textAtCells.count) ? textAtCells[index] : "")
                         .foregroundStyle(Color(red: 0.1, green: 0.42, blue: 0.58))
                         .bold()
                 }
@@ -174,9 +226,9 @@ extension ReadingTextPage: ReadingTextRequestDelegate {
     func didReceive(readingText: [String]) {
         DispatchQueue.main.async {
             print(readingText)
+            textAtCells = Array(repeating: "", count: readingText.count)
             dataModel.readingText = readingText
             dataModel.shuffledReadingText = readingText.shuffled()
-            textAtCells = Array(repeating: "", count: readingText.count)
         }
     }
     
