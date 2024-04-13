@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 import json
 from Backend.Text import *
-
+import re
 app = FastAPI()
 
 @app.get("")
@@ -14,3 +14,4 @@ def reading_words_list():
 
 
 print(print_db())
+
