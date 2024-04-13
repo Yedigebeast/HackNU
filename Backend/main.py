@@ -13,5 +13,7 @@ def reading_words_list():
     return {"words_list": text_to_words()}
 
 
+
+
 print(print_db())
 
