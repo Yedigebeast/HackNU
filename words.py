@@ -46,15 +46,7 @@ def print_db_words():
         print(element.word)
 
 
-def text_to_words():
-    random_text = get_random_text()
-    return random_text.split()
-
-
 def get_random_word():
     return random.choice(session.query(Word).all())
 
 
-def delete_db():
-    session.query(Text).delete()
-    session.commit()

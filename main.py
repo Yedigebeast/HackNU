@@ -57,7 +57,7 @@ def create_request():
         user = add_user(email=email, password=password)
         return {'user': user}
 
-
+print_db()
 @app.get("/interest/{name}")
 def create_interest(name: str):
     interest = add_interest(name=name)
