@@ -44,9 +44,18 @@ def print_db_words():
     all_elements = session.query(Word).all()
     for element in all_elements:
         print(element.word)
+        print(element.rus)
+        print(element.eng)
+        print(element.desc)
+        print()
 
-
+def get_all_words():
+    return session.query(Word).all()
 def get_random_word():
     return random.choice(session.query(Word).all())
+
+def delete_db_words():
+    session.query(Word).delete()
+    session.commit()
 
 
