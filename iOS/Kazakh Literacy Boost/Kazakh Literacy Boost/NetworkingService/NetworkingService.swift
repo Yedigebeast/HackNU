@@ -12,5 +12,6 @@ class NetworkingService {
     var readingTextDelegate: ReadingTextRequestDelegate? = nil
     var listeningAudioDelegate: ListeninAudioRequestDelegate? = nil
     var speakingMeetingDelegate: SpeakingMeetingRequestDelegate? = nil
+    var wordsDelegate: WordsRequestDelegate? = nil
     
 }

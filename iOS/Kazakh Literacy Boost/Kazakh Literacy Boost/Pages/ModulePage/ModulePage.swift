@@ -66,7 +66,7 @@ struct ModulePage: View {
         ZStack {
             switch dataModel.module {
             case .words:
-                Text(dataModel.module.text)
+                WordsPage(dataModel: dataModel)
             case .reading:
                 ReadingTextPage(
                     dataModel: dataModel,
