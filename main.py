@@ -8,7 +8,7 @@ from Text import *
 from User import *
 from CallRequest import *
 from meeting import speaking_meeting_link
-
+from words import *
 app = FastAPI()
 
 
@@ -30,7 +30,6 @@ def listening(request: Request):
     return {"text": text, "audio": audio_url}
 
 
-print(print_db())
 
 
 @app.get("/users")
@@ -76,6 +75,12 @@ def create_request(user_email: str, interest_id: int):
 def speaking():
     return {"meeting_link": speaking_meeting_link()}
 
-
+@app.get("/dictionary/item")
+def dict_item():
+    new_item = get_random_word()
+    return {"word": new_item.word, "rus": new_item.rus, "eng": new_item.eng, "description": new_item.desc}
+print("WORDS\n\n")
+# print_db_words()
+print((get_random_word().word))
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=os.getenv("PORT", default=8000), log_level="info")
