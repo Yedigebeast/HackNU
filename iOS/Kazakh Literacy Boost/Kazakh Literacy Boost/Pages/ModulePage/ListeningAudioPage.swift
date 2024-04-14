@@ -44,8 +44,7 @@ struct ListeningAudioPage: View {
                     }
                     Spacer()
                         .frame(width: 16)
-                    ProgressView("Progress bar", value: progress, total: 1)
-                        .labelsHidden()
+                    ProgressView("\(Int(progress * 100))%", value: progress, total: 1)
                 }
                 .foregroundStyle(.black)
                 Spacer()
@@ -60,6 +59,13 @@ struct ListeningAudioPage: View {
                     .cornerRadius(16)
                 Spacer()
                     .frame(height: 16)
+            }
+            .onChange(of: text) { newValue in
+                print(newValue)
+                if newValue.hasSuffix("\n") {
+                    text = text.replacingOccurrences(of: "\n", with: "", options: [.caseInsensitive, .regularExpression])
+                    hideKeyboard()
+                }
             }
             .padding(.horizontal)
             if checkButtonPressed {
@@ -129,6 +135,10 @@ struct ListeningAudioPage: View {
             dataModel.networkingService.listeningAudioDelegate = self
             start()
         }
+    }
+    
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
     private func putCorrectAnswer() {

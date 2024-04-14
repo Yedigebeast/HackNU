@@ -18,6 +18,8 @@ struct SpeakingMeetingPage: View {
             if let url = URL(string: meetingLink) {
                 SafariWebView(url: url)
                     .ignoresSafeArea()
+            } else {
+                Spacer()
             }
         }.onAppear {
             dataModel.networkingService.speakingMeetingDelegate = self
