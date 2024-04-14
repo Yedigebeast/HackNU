@@ -1,12 +1,13 @@
-from fastapi import FastAPI, Request, Query
+import os
+
+import uvicorn
+from fastapi import FastAPI, Request
 from fastapi.responses import RedirectResponse
-import json
-from Backend.text_to_speech import audio
-import re
-from Backend.Text import *
-from Backend.User import *
-from Backend.CallRequest import *
-from Backend.meeting import speaking_meeting_link
+from text_to_speech import audio
+from Text import *
+from User import *
+from CallRequest import *
+from meeting import speaking_meeting_link
 app = FastAPI()
 
 @app.get("")
@@ -66,3 +67,6 @@ def create_request(user_email: str, interest_id: int):
 @app.get("/speaking/gogo")
 def speaking():
     return {"meeting_link": speaking_meeting_link()}
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=os.getenv("PORT", default=8000), log_level="info")

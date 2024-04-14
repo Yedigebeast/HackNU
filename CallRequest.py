@@ -1,9 +1,6 @@
-from sqlalchemy import Column, Integer, Sequence, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine, and_
-from sqlalchemy.orm import sessionmaker, relationship
-from Backend.User import User
-from Backend.Interest import *
+from sqlalchemy.orm import relationship
+from User import User
+from Interest import *
 
 Base = declarative_base()
 

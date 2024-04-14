@@ -1,6 +1,6 @@
 import requests
 import json
-from Backend.Text import get_random_text
+from Text import get_random_text
 
 # Base URL of the Listnr API
 base_url = "https://bff.listnr.tech/api/tts/v1/"
