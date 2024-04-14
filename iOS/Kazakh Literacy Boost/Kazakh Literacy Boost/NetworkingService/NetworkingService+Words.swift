@@ -8,7 +8,7 @@
 import Foundation
 
 protocol WordsRequestDelegate {
-    func didReceive(wordsData: WordsData)
+    func didReceive(wordsData: [WordsData])
     func failWithError(error: Error)
 }
 
@@ -37,16 +37,20 @@ extension NetworkingService {
         
     }
     
-    private func wordsJson(_ data: Data) -> WordsData? {
+    private func wordsJson(_ data: Data) -> [WordsData]? {
         let decoder = JSONDecoder()
         do {
-            let decodedData = try decoder.decode(WordsData.self, from: data)
-            return decodedData
+            let decodedData = try decoder.decode(WordsListData.self, from: data)
+            return decodedData.words
         } catch {
             self.wordsDelegate?.failWithError(error: error)
             return nil
         }
     }
+}
+
+struct WordsListData: Decodable {
+    var words: [WordsData]
 }
 
 struct WordsData: Decodable {

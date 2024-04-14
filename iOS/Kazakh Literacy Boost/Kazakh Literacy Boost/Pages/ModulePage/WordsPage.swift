@@ -18,17 +18,18 @@ class NVFlipCardPresenter: ObservableObject {
 struct WordsPage: View {
     @StateObject var dataModel: ModulePageModel
     
-    @State var wordsData: WordsData?
+    @State var wordsData = [WordsData]()
+    @State var index = 0
     @StateObject var presenter = NVFlipCardPresenter()
     
     var body: some View {
         let flipDegrees = presenter.isFlipped ? 180.0 : 0
         return ZStack {
-            if let wordsData {
+            if !wordsData.isEmpty {
                 VStack {
                     Spacer()
                     ZStack() {
-                        Text(wordsData.word)
+                        Text(wordsData[index].word)
                             .font(.system(size: 25))
                             .bold()
                             .foregroundStyle(Color(red: 0.1, green: 0.42, blue: 0.58))
@@ -37,13 +38,13 @@ struct WordsPage: View {
                             .opacity(presenter.isFlipped ? 0.0 : 1.0)
                         
                         VStack {
-                            Text(wordsData.rus)
+                            Text(wordsData[index].rus)
                             Spacer()
                                 .frame(height: 16)
-                            Text(wordsData.eng)
+                            Text(wordsData[index].eng)
                             Spacer()
                                 .frame(height: 32)
-                            Text(wordsData.description)
+                            Text(wordsData[index].description)
                         }
                         .font(.system(size: 20))
                         .foregroundStyle(Color(red: 0.1, green: 0.42, blue: 0.58))
@@ -53,6 +54,19 @@ struct WordsPage: View {
                     }
                     .animation(.easeInOut(duration: 1.0), value: presenter.isFlipped)
                     .onTapGesture { presenter.isFlipped.toggle() }
+                    Spacer()
+                    Button {
+                        presenter.isFlipped = false
+                        index = (index + 1) % wordsData.count
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color(red: 0.682, green: 0.612, blue: 0.908))
+                            Text("Келесі сөз")
+                                .foregroundStyle(.white)
+                        }
+                    }
+                    .frame(width: 240, height: 56)
                     Spacer()
                 }
             } else {
@@ -72,7 +86,7 @@ struct WordsPage: View {
     
     private func performWordsRequest() {
         dataModel.requestRunCount += 1
-        if (dataModel.requestRunCount >= 5 && wordsData == nil) {
+        if (dataModel.requestRunCount >= 5 && wordsData.isEmpty) {
             print("yedige, please turn on the internet")
         } else {
             dataModel.networkingService.getWords()
@@ -81,7 +95,7 @@ struct WordsPage: View {
 }
 
 extension WordsPage: WordsRequestDelegate {
-    func didReceive(wordsData: WordsData) {
+    func didReceive(wordsData: [WordsData]) {
         DispatchQueue.main.async {
             print("words data is: \(wordsData)")
             self.wordsData = wordsData
